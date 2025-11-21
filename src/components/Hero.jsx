@@ -1,13 +1,16 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import Spline from '@splinetool/react-spline'
+import SafeSpline from './SafeSpline'
 
 const Hero = () => {
   return (
     <section className="relative min-h-[92vh] w-full overflow-hidden bg-black text-white">
       {/* 3D Spline Background */}
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/Gt5HUob8aGDxOUep/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <SafeSpline
+          scene="https://prod.spline.design/Gt5HUob8aGDxOUep/scene.splinecode"
+          style={{ width: '100%', height: '100%' }}
+        />
       </div>
 
       {/* Vignette and grain overlays */}
